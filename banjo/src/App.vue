@@ -1,12 +1,19 @@
 <template>
+<body class="body">
   <div id="app">
+    <ToolBar></ToolBar>
     <router-view/>
   </div>
+  </body>
 </template>
 
 <script>
+import ToolBar from '@/components/ToolBar.vue'
 export default {
-  name: 'App'
+  name: 'App',
+    components: {
+    ToolBar
+  }
 }
 </script>
 
@@ -17,6 +24,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #4bc7cb;
+
+}
+.body {
+display: block;
+height: 100%;
+margin-left: -8px;
+margin-right: -8px;
 }
 </style>
